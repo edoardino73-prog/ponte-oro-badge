@@ -1,0 +1,1 @@
+<host-apdu-service xmlns:android="http://schemas.android.com/apk/res/android" android:description="Ponte dOro" android:requireDeviceUnlock="false"><aid-group android:category="other" android:description="Ponte dOro"><aid-filter android:name="F0394147147256C4C6F524F"/></aid-group></host-apdu-service>

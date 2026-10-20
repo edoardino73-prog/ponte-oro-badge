@@ -1,0 +1,29 @@
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+android {
+    namespace 'it.pontedoro.hce'
+    compileSdk 34
+    defaultConfig {
+        applicationId "it.pontedoro.hce"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+    flavorDimensions "dipendente"
+    productFlavors {
+        mariaRossi { dimension "dipendente"; applicationIdSuffix ".maria"; buildConfigField "String", "BADGE_ID", "\"PONTEORO-100001\""; buildConfigField "String", "NOME", "\"Maria Rossi\"" }
+        lucaBianchi { dimension "dipendente"; applicationIdSuffix ".luca"; buildConfigField "String", "BADGE_ID", "\"PONTEORO-100002\""; buildConfigField "String", "NOME", "\"Luca Bianchi\"" }
+        giuliaVerdi { dimension "dipendente"; applicationIdSuffix ".giulia"; buildConfigField "String", "BADGE_ID", "\"PONTEORO-100003\""; buildConfigField "String", "NOME", "\"Giulia Verdi\"" }
+        marcoNeri { dimension "dipendente"; applicationIdSuffix ".marco"; buildConfigField "String", "BADGE_ID", "\"PONTEORO-100004\""; buildConfigField "String", "NOME", "\"Marco Neri\"" }
+        annaGialli { dimension "dipendente"; applicationIdSuffix ".anna"; buildConfigField "String", "BADGE_ID", "\"PONTEORO-100005\""; buildConfigField "String", "NOME", "\"Anna Gialli\"" }
+    }
+    buildFeatures { buildConfig true }
+}
+dependencies {
+    implementation "androidx.appcompat:appcompat:1.6.1"
+    implementation "com.google.android.material:material:1.9.0"
+}
